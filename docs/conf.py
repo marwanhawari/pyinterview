@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'coding_interview'
+project = 'pyinterview'
 copyright = '2021, Marwan Hawari'
 author = 'Marwan Hawari'
 
