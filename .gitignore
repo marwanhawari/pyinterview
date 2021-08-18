@@ -142,5 +142,5 @@ node_modules/
 # Mac Finder files
 .DS_Store
 
-# dummy file
-dummy.py
+# dummy files
+dummy*
