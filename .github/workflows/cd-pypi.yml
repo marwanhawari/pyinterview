@@ -1,7 +1,11 @@
-name: CI and CD
+name: CD onto PyPI
 
 on:
-  [push, pull_request]
+  push:
+    branches:
+      - main
+    tags:
+      - v*
 
 jobs:
   
@@ -44,14 +48,9 @@ jobs:
       - name: Update build and twine
         run: pip install --upgrade build twine
       - name: Build distribution and deploy to PyPI
-        # Checks if event is a push and if the commit is tagged
-        if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags')
         env:
           TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}
           TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
         run: |
           python3 -m build
           twine upload dist/*
-        
-
-      
