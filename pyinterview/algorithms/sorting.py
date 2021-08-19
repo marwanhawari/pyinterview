@@ -1,5 +1,54 @@
 from collections import deque
 from typing import Sequence
+from random import randint
+
+
+def quick_sort(nums: list) -> list:
+    if len(nums) == 0:
+        return []
+    
+    pivot = nums[randint(0, len(nums) - 1)]
+
+    smaller = [x for x in nums if x < pivot]
+    equal = [x for x in nums if x == pivot]
+    greater = [x for x in nums if x > pivot]
+
+    return quick_sort(smaller) + equal + quick_sort(greater)
+
+
+def merge_sort(nums):
+    
+    def split_array(nums):
+        if len(nums) <= 1:
+            return nums
+        
+        mid = len(nums)//2
+
+        left = split_array(nums[:mid])
+        right = split_array(nums[mid:])
+
+        return merge_two(left, right)
+    
+    def merge_two(a, b):
+        result = []
+        i = j = 0
+        while i < len(a) and j < len(b):
+            if a[i] <= b[j]:
+                result.append(a[i])
+                i += 1
+            else:
+                result.append(b[j])
+                j += 1
+        while i < len(a):
+            result.append(a[i])
+            i+=1
+        while j < len(b):
+            result.append(b[j])
+            j+=1
+        return result
+    
+    return split_array(nums)
+
 
 def topological_sort(edges: list[Sequence]) -> list:
     def create_adj_list(edges: list[Sequence]) -> dict:

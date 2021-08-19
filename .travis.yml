@@ -16,3 +16,6 @@ install:
 
 script:
   - tox -e py
+
+notifications:
+  email: false
