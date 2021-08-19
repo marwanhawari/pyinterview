@@ -20,6 +20,7 @@ jobs:
         with:
           python-version: ${{ matrix.python }}
       - name: Install Tox
+        run: pip install --upgrade pip setuptools wheel
         run: pip install tox
       - name: Run Tox
         # Run tox using the version of Python in `PATH`
