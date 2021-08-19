@@ -9,3 +9,6 @@ This library contains useful data structures and algorithms that are commonly us
 ```
 pip install pyinterview
 ```
+
+# Documentation
+[Read the Docs](pyinterview.readthedocs.io)
