@@ -19,8 +19,9 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: ${{ matrix.python }}
-      - name: Install Tox
+      - name: Update pip, setuptools, and wheel
         run: pip install --upgrade pip setuptools wheel
+      - name: Install Tox
         run: pip install tox
       - name: Run Tox
         # Run tox using the version of Python in `PATH`
