@@ -16,7 +16,7 @@ def quick_sort(nums: list) -> list:
     return quick_sort(smaller) + equal + quick_sort(greater)
 
 
-def merge_sort(nums):
+def merge_sort(nums: list) -> list:
     
     def split_array(nums):
         if len(nums) <= 1:
