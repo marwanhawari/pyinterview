@@ -11,4 +11,4 @@ pip install pyinterview
 ```
 
 # Documentation
-[Read the Docs](pyinterview.readthedocs.io)
+[Read the Docs](https://pyinterview.readthedocs.io)

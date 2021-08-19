@@ -1,12 +1,13 @@
 name: CI with Tox
 
 on:
-  push:
-    tags-ignore:
-      - v*
-  pull_request:
-    tags-ignore:
-      - v*
+  [push, pull_request]
+  # push:
+  #   tags-ignore:
+  #     - v*
+  # pull_request:
+  #   tags-ignore:
+  #     - v*
 
 jobs:
   
