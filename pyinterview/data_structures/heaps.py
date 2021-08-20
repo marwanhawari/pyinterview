@@ -4,7 +4,7 @@ class MinHeap:
 
     def heapify(self, array):
         self.heap = array
-        bottom_parent_index = (len(array)-1)//2
+        bottom_parent_index = (len(array) - 1) // 2
         for starting_index in reversed(range(bottom_parent_index)):
             self.sift_down(starting_index)
         return self.heap
@@ -16,26 +16,31 @@ class MinHeap:
 
     def insert(self, value):
         self.heap.append(value)
-        self.sift_up(len(self.heap)-1)
+        self.sift_up(len(self.heap) - 1)
 
     def sift_up(self, starting_index):
-        parent_index = (starting_index-1)//2
-        while self.heap[starting_index] < self.heap[parent_index] and starting_index > 0:
+        parent_index = (starting_index - 1) // 2
+        while (
+            self.heap[starting_index] < self.heap[parent_index] and starting_index > 0
+        ):
             self.swap(starting_index, parent_index)
             starting_index = parent_index
-            parent_index = (starting_index-1)//2
+            parent_index = (starting_index - 1) // 2
 
     ######## REMOVE (log n) ############
 
     def pop(self):
-        self.swap(0, len(self.heap)-1)
+        self.swap(0, len(self.heap) - 1)
         popped = self.heap.pop()
         self.sift_down(0)
         return popped
 
     def sift_down(self, starting_index):
         min_child_index = self.min_child_index(starting_index)
-        while self.heap[starting_index] > self.heap[min_child_index] and starting_index < len(self.heap) - 1:
+        while (
+            self.heap[starting_index] > self.heap[min_child_index]
+            and starting_index < len(self.heap) - 1
+        ):
             self.swap(starting_index, min_child_index)
             starting_index = min_child_index
             min_child_index = self.min_child_index(starting_index)
@@ -51,7 +56,12 @@ class MinHeap:
         elif right_child_index > heap_bound:
             return left_child_index
         else:
-            return left_child_index if self.heap[left_child_index] <= self.heap[right_child_index] else right_child_index
+            return (
+                left_child_index
+                if self.heap[left_child_index] <= self.heap[right_child_index]
+                else right_child_index
+            )
+
 
 class MaxHeap:
     def __init__(self):
@@ -59,7 +69,7 @@ class MaxHeap:
 
     def heapify(self, array):
         self.heap = array
-        bottom_parent_index = (len(array)-1)//2
+        bottom_parent_index = (len(array) - 1) // 2
         for starting_index in reversed(range(bottom_parent_index)):
             self.sift_down(starting_index)
         return self.heap
@@ -71,26 +81,31 @@ class MaxHeap:
 
     def insert(self, value):
         self.heap.append(value)
-        self.sift_up(len(self.heap)-1)
+        self.sift_up(len(self.heap) - 1)
 
     def sift_up(self, starting_index):
-        parent_index = (starting_index-1)//2
-        while self.heap[starting_index] > self.heap[parent_index] and starting_index > 0: # Changed in MaxHeap
+        parent_index = (starting_index - 1) // 2
+        while (
+            self.heap[starting_index] > self.heap[parent_index] and starting_index > 0
+        ):  # Changed in MaxHeap
             self.swap(starting_index, parent_index)
             starting_index = parent_index
-            parent_index = (starting_index-1)//2
+            parent_index = (starting_index - 1) // 2
 
     ######## REMOVE (log n) ############
 
     def pop(self):
-        self.swap(0, len(self.heap)-1)
+        self.swap(0, len(self.heap) - 1)
         popped = self.heap.pop()
         self.sift_down(0)
         return popped
 
     def sift_down(self, starting_index):
         max_child_index = self.max_child_index(starting_index)
-        while self.heap[starting_index] < self.heap[max_child_index] and starting_index < len(self.heap) - 1: # Changed in MaxHeap
+        while (
+            self.heap[starting_index] < self.heap[max_child_index]
+            and starting_index < len(self.heap) - 1
+        ):  # Changed in MaxHeap
             self.swap(starting_index, max_child_index)
             starting_index = max_child_index
             max_child_index = self.max_child_index(starting_index)
@@ -106,4 +121,8 @@ class MaxHeap:
         elif right_child_index > heap_bound:
             return left_child_index
         else:
-            return left_child_index if self.heap[left_child_index] >= self.heap[right_child_index] else right_child_index # Changed in MaxHeap
+            return (
+                left_child_index
+                if self.heap[left_child_index] >= self.heap[right_child_index]
+                else right_child_index
+            )  # Changed in MaxHeap
