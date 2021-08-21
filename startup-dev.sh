@@ -8,7 +8,7 @@ python3 -m venv venv_$pwd
 source venv_$pwd/bin/activate
 
 # Install the dev packages
-pip install --upgrade pip
+pip install --upgrade pip setuptools
 pip install -r requirements-dev.txt
 
 # Install the pre-commit hook

@@ -5,7 +5,6 @@ pipdeptree
 pre-commit
 pytest
 pytype
-setuptools
 Sphinx
 tox
 twine
