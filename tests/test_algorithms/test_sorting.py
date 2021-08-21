@@ -1,5 +1,8 @@
-import pytest
-from pyinterview.algorithms.sorting import quick_sort, merge_sort, topological_sort
+from pyinterview.algorithms.sorting import (
+    quick_sort,
+    merge_sort,
+    topological_sort,
+)
 
 
 def test_quick_sort():

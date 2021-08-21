@@ -1,0 +1,12 @@
+black
+build
+flake8
+pipdeptree
+pre-commit
+pytest
+pytype
+setuptools
+Sphinx
+tox
+twine
+wheel

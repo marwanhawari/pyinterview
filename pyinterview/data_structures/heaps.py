@@ -10,7 +10,10 @@ class MinHeap:
         return self.heap
 
     def swap(self, index_a, index_b):
-        self.heap[index_a], self.heap[index_b] = self.heap[index_b], self.heap[index_a]
+        self.heap[index_a], self.heap[index_b] = (
+            self.heap[index_b],
+            self.heap[index_a],
+        )
 
     ######### INSERT (log n) ##########
 
@@ -75,7 +78,10 @@ class MaxHeap:
         return self.heap
 
     def swap(self, index_a, index_b):
-        self.heap[index_a], self.heap[index_b] = self.heap[index_b], self.heap[index_a]
+        self.heap[index_a], self.heap[index_b] = (
+            self.heap[index_b],
+            self.heap[index_a],
+        )
 
     ######### INSERT (log n) ##########
 

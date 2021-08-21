@@ -1,5 +1,5 @@
 import pytest
-from pyinterview.data_structures.heaps import *
+from pyinterview.data_structures.heaps import MinHeap, MaxHeap
 
 
 @pytest.fixture

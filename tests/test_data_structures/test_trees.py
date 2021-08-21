@@ -1,5 +1,11 @@
 import pytest
-from pyinterview.data_structures.trees import *
+from pyinterview.data_structures.trees import (
+    deserialize,
+    in_order_traversal,
+    pre_order_traversal,
+    post_order_traversal,
+    level_order_traversal,
+)
 
 
 @pytest.fixture
@@ -34,7 +40,12 @@ def test_post_order_traversal_edge():
 
 
 def test_level_order_traversal(root):
-    assert level_order_traversal(root) == [[8], [3, 10], [1, 6, 14], [4, 7, 13]]
+    assert level_order_traversal(root) == [
+        [8],
+        [3, 10],
+        [1, 6, 14],
+        [4, 7, 13],
+    ]
 
 
 def test_level_order_traversal_edge():
