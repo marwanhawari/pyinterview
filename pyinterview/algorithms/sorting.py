@@ -28,7 +28,7 @@ def merge_sort(nums: list) -> list:
 
         return merge_two(left, right)
 
-    def merge_two(a, b):
+    def merge_two(a: list, b: list) -> list:
         result = []
         i = j = 0
         while i < len(a) and j < len(b):

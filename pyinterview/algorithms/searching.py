@@ -1,4 +1,13 @@
 def binary_search(array: list[int], target: int) -> int:
+    """Perform a binary search.
+
+    Args:
+        array (list[int]): The array in which to search.
+        target (int): The number to search for.
+
+    Returns:
+        int: The index of the target in the array. If target not found, return -1.
+    """
     left = 0
     right = len(array) - 1
 
