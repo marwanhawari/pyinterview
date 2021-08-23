@@ -1,5 +1,5 @@
 import pytest
-from pyinterview.data_structures.trees import (
+from pyinterview.trees import (
     deserialize,
     in_order_traversal,
     pre_order_traversal,

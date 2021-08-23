@@ -1,5 +1,5 @@
 import pytest
-from pyinterview.algorithms.searching import binary_search
+from pyinterview.searching import binary_search
 
 
 @pytest.fixture

@@ -1,4 +1,4 @@
-from pyinterview.algorithms.sorting import (
+from pyinterview.sorting import (
     quick_sort,
     merge_sort,
     topological_sort,

@@ -1,6 +1,6 @@
 [![PyPI version](https://badge.fury.io/py/pyinterview.svg)](https://badge.fury.io/py/pyinterview)
 [![PyPI - Downloads](https://img.shields.io/pypi/dm/pyinterview)](https://pypi.org/project/pyinterview/)
-[![Build Status](https://travis-ci.com/marwanhawari/pyinterview.svg?branch=main)](https://travis-ci.com/marwanhawari/pyinterview)
+![Build Status](https://github.com/marwanhawari/pyinterview/actions/workflows/build.yml/badge.svg)
 [![Documentation Status](https://readthedocs.org/projects/pyinterview/badge/?version=latest)](https://pyinterview.readthedocs.io/en/latest/?badge=latest)
 [![Code Style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
