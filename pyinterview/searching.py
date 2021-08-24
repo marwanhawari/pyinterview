@@ -1,3 +1,6 @@
+from typing import Union
+
+
 def binary_search(array: list[int], target: int) -> int:
     """Perform a binary search.
 
@@ -22,3 +25,15 @@ def binary_search(array: list[int], target: int) -> int:
             right = mid - 1
 
     return -1
+
+
+def quick_select(nums: list[Union[int, float]], k: int) -> Union[int, float]:
+    return 0
+
+
+def dfs(adj_list: dict) -> list:
+    return []
+
+
+def bfs(adj_list: dict) -> list:
+    return []

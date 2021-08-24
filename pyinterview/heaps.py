@@ -1,27 +1,28 @@
+from typing import Union
+
+
 class MinHeap:
     def __init__(self):
         self.heap = []
 
-    def heapify(self, array):
+    def heapify(self, array: list) -> list:
         self.heap = array
         bottom_parent_index = (len(array) - 1) // 2
         for starting_index in reversed(range(bottom_parent_index)):
             self.sift_down(starting_index)
         return self.heap
 
-    def swap(self, index_a, index_b):
+    def swap(self, index_a: int, index_b: int) -> None:
         self.heap[index_a], self.heap[index_b] = (
             self.heap[index_b],
             self.heap[index_a],
         )
 
-    ######### INSERT (log n) ##########
-
-    def insert(self, value):
+    def insert(self, value: Union[int, float]) -> None:
         self.heap.append(value)
         self.sift_up(len(self.heap) - 1)
 
-    def sift_up(self, starting_index):
+    def sift_up(self, starting_index: int) -> None:
         parent_index = (starting_index - 1) // 2
         while (
             self.heap[starting_index] < self.heap[parent_index] and starting_index > 0
@@ -30,15 +31,13 @@ class MinHeap:
             starting_index = parent_index
             parent_index = (starting_index - 1) // 2
 
-    ######## REMOVE (log n) ############
-
-    def pop(self):
+    def pop(self) -> Union[int, float]:
         self.swap(0, len(self.heap) - 1)
         popped = self.heap.pop()
         self.sift_down(0)
         return popped
 
-    def sift_down(self, starting_index):
+    def sift_down(self, starting_index: int) -> None:
         min_child_index = self.min_child_index(starting_index)
         while (
             self.heap[starting_index] > self.heap[min_child_index]
@@ -48,7 +47,7 @@ class MinHeap:
             starting_index = min_child_index
             min_child_index = self.min_child_index(starting_index)
 
-    def min_child_index(self, parent_index):
+    def min_child_index(self, parent_index: int) -> int:
         heap_bound = len(self.heap) - 1
 
         left_child_index = 2 * parent_index + 1
@@ -70,26 +69,24 @@ class MaxHeap:
     def __init__(self):
         self.heap = []
 
-    def heapify(self, array):
+    def heapify(self, array: list) -> list:
         self.heap = array
         bottom_parent_index = (len(array) - 1) // 2
         for starting_index in reversed(range(bottom_parent_index)):
             self.sift_down(starting_index)
         return self.heap
 
-    def swap(self, index_a, index_b):
+    def swap(self, index_a: int, index_b: int) -> None:
         self.heap[index_a], self.heap[index_b] = (
             self.heap[index_b],
             self.heap[index_a],
         )
 
-    ######### INSERT (log n) ##########
-
-    def insert(self, value):
+    def insert(self, value: Union[int, float]) -> None:
         self.heap.append(value)
         self.sift_up(len(self.heap) - 1)
 
-    def sift_up(self, starting_index):
+    def sift_up(self, starting_index: int) -> None:
         parent_index = (starting_index - 1) // 2
         while (
             self.heap[starting_index] > self.heap[parent_index] and starting_index > 0
@@ -98,15 +95,13 @@ class MaxHeap:
             starting_index = parent_index
             parent_index = (starting_index - 1) // 2
 
-    ######## REMOVE (log n) ############
-
-    def pop(self):
+    def pop(self) -> Union[int, float]:
         self.swap(0, len(self.heap) - 1)
         popped = self.heap.pop()
         self.sift_down(0)
         return popped
 
-    def sift_down(self, starting_index):
+    def sift_down(self, starting_index: int) -> None:
         max_child_index = self.max_child_index(starting_index)
         while (
             self.heap[starting_index] < self.heap[max_child_index]
@@ -116,7 +111,7 @@ class MaxHeap:
             starting_index = max_child_index
             max_child_index = self.max_child_index(starting_index)
 
-    def max_child_index(self, parent_index):
+    def max_child_index(self, parent_index: int) -> int:
         heap_bound = len(self.heap) - 1
 
         left_child_index = 2 * parent_index + 1

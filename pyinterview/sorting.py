@@ -1,9 +1,21 @@
-from collections import deque
 from typing import Sequence
 from random import randint
+from pyinterview.graphs import directed_adj_list, inbound_degrees, find_sources
+
+
+def bubble_sort(nums: list) -> list:
+    return []
 
 
 def quick_sort(nums: list) -> list:
+    """[summary]
+
+    Args:
+        nums (list): [description]
+
+    Returns:
+        list: [description]
+    """
     if len(nums) == 0:
         return []
 
@@ -17,7 +29,16 @@ def quick_sort(nums: list) -> list:
 
 
 def merge_sort(nums: list) -> list:
-    def split_array(nums):
+    """[summary]
+
+    Args:
+        nums (list): [description]
+
+    Returns:
+        list: [description]
+    """
+
+    def split_array(nums: list) -> list:
         if len(nums) <= 1:
             return nums
 
@@ -49,38 +70,21 @@ def merge_sort(nums: list) -> list:
     return split_array(nums)
 
 
-def topological_sort(edges: list[Sequence]) -> list:
-    def create_adj_list(edges: list[Sequence]) -> dict:
-        d = {}
-        for start, end in edges:
-            if start not in d:
-                d[start] = []
-            d[start].append(end)
+def topological_sort(edges: Sequence[Sequence]) -> list:
+    """[summary]
 
-            if end not in d:
-                d[end] = []
+    Args:
+        edges (Sequence[Sequence]): [description]
 
-        return d
+    Returns:
+        list: [description]
+    """
 
-    adj_list = create_adj_list(edges)
+    adj_list = directed_adj_list(edges)
 
-    def calculate_inbound_degrees(adj_list: dict) -> dict:
-        inbound_degrees = {node: 0 for node in adj_list}
-        for node in adj_list:
-            for neighbor in adj_list[node]:
-                inbound_degrees[neighbor] += 1
-        return inbound_degrees
+    indegrees = inbound_degrees(adj_list)
 
-    inbound_degrees = calculate_inbound_degrees(adj_list)
-
-    def find_sources(inbounnd_degrees: dict) -> deque:
-        sources = deque()
-        for node in inbounnd_degrees:
-            if inbounnd_degrees[node] == 0:
-                sources.append(node)
-        return sources
-
-    sources = find_sources(inbound_degrees)
+    sources = find_sources(indegrees)
 
     result = []
     while len(sources) > 0:
@@ -89,8 +93,8 @@ def topological_sort(edges: list[Sequence]) -> list:
         result.append(source)
 
         for neighbor in adj_list[source]:
-            inbound_degrees[neighbor] -= 1
-            if inbound_degrees[neighbor] == 0:
+            indegrees[neighbor] -= 1
+            if indegrees[neighbor] == 0:
                 sources.append(neighbor)
 
     return result[::-1] if len(result) == len(adj_list) else []

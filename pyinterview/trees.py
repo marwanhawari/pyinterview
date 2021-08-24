@@ -108,3 +108,23 @@ def deserialize(nodes: list) -> Optional[TreeNode]:
         i += 1
 
     return root
+
+
+def invert(root: TreeNode) -> TreeNode:
+    return TreeNode(0)
+
+
+def diameter(root: TreeNode) -> int:
+    return 0
+
+
+def max_depth(root: TreeNode) -> int:
+    return 0
+
+
+def check_bst(root: TreeNode) -> bool:
+    return True
+
+
+def check_balanced(root: TreeNode) -> bool:
+    return True
