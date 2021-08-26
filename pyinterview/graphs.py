@@ -30,6 +30,15 @@ def directed_adj_list(edges: Sequence[Sequence]) -> dict:
 
 
 def inbound_degrees(adj_list: dict) -> dict:
+    """Calculate the inbound degree of each node in a graph.
+
+    Args:
+        adj_list (dict): An adjacency list. Can be from an undirected or directed graph.
+
+    Returns:
+        dict: A dictionary where the key is a graph node
+        and the value is the number of inbound edges.
+    """
     indegrees = {node: 0 for node in adj_list}
     for node in adj_list:
         for neighbor in adj_list[node]:
