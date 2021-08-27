@@ -1,3 +1,7 @@
+<p align="center">
+  <img width=70% height=auto src="https://github.com/marwanhawari/pyinterview/blob/main/docs/pyinterview_logo.png" alt="pyinterview logo"/>
+</p>
+
 [![PyPI version](https://badge.fury.io/py/pyinterview.svg)](https://badge.fury.io/py/pyinterview)
 [![PyPI - Downloads](https://img.shields.io/pypi/dm/pyinterview)](https://pypi.org/project/pyinterview/)
 [![Build Status](https://github.com/marwanhawari/pyinterview/actions/workflows/build.yml/badge.svg)](https://github.com/marwanhawari/pyinterview/actions)
