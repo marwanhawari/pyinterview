@@ -9,6 +9,7 @@
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
 [![Documentation Status](https://readthedocs.org/projects/pyinterview/badge/?version=latest)](https://pyinterview.readthedocs.io/en/latest/?badge=latest)
+[![GitHub](https://img.shields.io/github/license/marwanhawari/pyinterview?color=blue)](LICENSE)
 
 # Description
 This library contains useful data structures and algorithms that are commonly used in coding interviews.
