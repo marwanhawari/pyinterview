@@ -6,7 +6,6 @@ pipdeptree
 pre-commit
 pytest
 pytype
-Sphinx
 tox
 twine
 wheel

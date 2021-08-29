@@ -4,17 +4,25 @@ from pyinterview.graphs import directed_adj_list, inbound_degrees, find_sources
 
 
 def bubble_sort(nums: list) -> list:
+    """Sort an array using the bubble sort algorithm.
+
+    Args:
+        nums (list): The unsorted input array.
+
+    Returns:
+        list: The sorted output array.
+    """
     return []
 
 
 def quick_sort(nums: list) -> list:
-    """[summary]
+    """Sort an array using the quick sort algorithm.
 
     Args:
-        nums (list): [description]
+        nums (list): The unsorted input array.
 
     Returns:
-        list: [description]
+        list: The sorted output array.
     """
     if len(nums) == 0:
         return []
@@ -29,13 +37,13 @@ def quick_sort(nums: list) -> list:
 
 
 def merge_sort(nums: list) -> list:
-    """[summary]
+    """Sort an array using the merge sort algorithm.
 
     Args:
-        nums (list): [description]
+        nums (list): The unsorted input array.
 
     Returns:
-        list: [description]
+        list: The sorted output array.
     """
 
     def split_array(nums: list) -> list:
