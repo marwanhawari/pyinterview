@@ -3,6 +3,14 @@ from collections import deque
 
 
 def undirected_adj_list(edges: Sequence[Sequence]) -> dict:
+    """Creates an undirected graph represented as an adjacency list.
+
+    Args:
+        edges (Sequence[Sequence]): A list of edges pairs, ex: [('A', 'B'), ('A', 'C')].
+
+    Returns:
+        dict: An adjacency list where key = node and values = neighbors of that node.
+    """
     d = {}
     for start, end in edges:
         if start not in d:
@@ -17,6 +25,14 @@ def undirected_adj_list(edges: Sequence[Sequence]) -> dict:
 
 
 def directed_adj_list(edges: Sequence[Sequence]) -> dict:
+    """Creates a directed graph represented as an adjacency list.
+
+    Args:
+        edges (Sequence[Sequence]): A list of edges pairs, ex: [('A', 'B'), ('A', 'C')].
+
+    Returns:
+        dict: An adjacency list where key = node and values = neighbors of that node.
+    """
     d = {}
     for start, end in edges:
         if start not in d:
@@ -47,6 +63,15 @@ def inbound_degrees(adj_list: dict) -> dict:
 
 
 def find_sources(inbounnd_degrees: dict) -> deque:
+    """Find sources (nodes that have 0 inbound edges).
+
+    Args:
+        inbounnd_degrees (dict): A dictionary where the key is a graph node
+        and the value is the number of inbound edges.
+
+    Returns:
+        deque: A deque containing source nodes.
+    """
     sources = deque()
     for node in inbounnd_degrees:
         if inbounnd_degrees[node] == 0:
