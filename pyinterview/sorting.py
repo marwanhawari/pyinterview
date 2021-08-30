@@ -47,6 +47,14 @@ def merge_sort(nums: list) -> list:
     """
 
     def split_array(nums: list) -> list:
+        """Recursively split array in half.
+
+        Args:
+            nums (list): The unsorted input array.
+
+        Returns:
+            list: Returns a sorted array.
+        """
         if len(nums) <= 1:
             return nums
 
@@ -58,6 +66,15 @@ def merge_sort(nums: list) -> list:
         return merge_two(left, right)
 
     def merge_two(a: list, b: list) -> list:
+        """Merges two sorted arrays.
+
+        Args:
+            a (list): The first sorted array.
+            b (list): The second sorted array.
+
+        Returns:
+            list: Returns sorted array containing all elements from a and b.
+        """
         result = []
         i = j = 0
         while i < len(a) and j < len(b):
@@ -79,13 +96,13 @@ def merge_sort(nums: list) -> list:
 
 
 def topological_sort(edges: Sequence[Sequence]) -> list:
-    """[summary]
+    """Produce a topological sorting (if one exists) using a BFS approach.
 
     Args:
-        edges (Sequence[Sequence]): [description]
+        edges (Sequence[Sequence]): A list of edges pairs, ex: [('A', 'B'), ('A', 'C')].
 
     Returns:
-        list: [description]
+        list: An array with a non-unique topological order of nodes.
     """
 
     adj_list = directed_adj_list(edges)
