@@ -10,6 +10,14 @@ class TreeNode:
 
 
 def in_order_traversal(root: TreeNode) -> list:
+    """Perform an in order tree traversal.
+
+    Args:
+        root (TreeNode): The root node.
+
+    Returns:
+        list: A list of nodes sorted in in order traversal order.
+    """
     result = []
     if root is None:
         return []
@@ -20,6 +28,14 @@ def in_order_traversal(root: TreeNode) -> list:
 
 
 def pre_order_traversal(root: TreeNode) -> list:
+    """Perform a pre order tree traversal.
+
+    Args:
+        root (TreeNode): The root node.
+
+    Returns:
+        list: A list of nodes sorted in pre order traversal order.
+    """
     result = []
     if root is None:
         return []
@@ -30,6 +46,14 @@ def pre_order_traversal(root: TreeNode) -> list:
 
 
 def post_order_traversal(root: TreeNode) -> list:
+    """Perform a post order tree traversal.
+
+    Args:
+        root (TreeNode): The root node.
+
+    Returns:
+        list: A list of nodes sorted in post order traversal order.
+    """
     result = []
     if root is None:
         return []
@@ -40,6 +64,16 @@ def post_order_traversal(root: TreeNode) -> list:
 
 
 def level_order_traversal(root: TreeNode) -> list[list]:
+    """Perform a level order tree traversal.
+
+    Args:
+        root (TreeNode): The root node.
+
+    Returns:
+        list[list]: A list of lists where the index of each sublist is the level
+        in the tree, and the elements of that sublist are the nodes at that level
+        from left to right.
+    """
     if root is None:
         return []
 
@@ -63,6 +97,18 @@ def level_order_traversal(root: TreeNode) -> list[list]:
 
 
 def serialize(root: TreeNode) -> list:
+    """Generate a list of tree nodes using level order traversal.
+        Notably, missing children nodes are denoted with an "X".
+        This is so that the tree can be completely reconstructed
+        from just the output list.
+
+    Args:
+        root (TreeNode): The root node.
+
+    Returns:
+        list: Tbe list of nodes in level order traversal order. Missing
+        children are denoted with an "X".
+    """
     if not root:
         return []
 
@@ -85,6 +131,15 @@ def serialize(root: TreeNode) -> list:
 
 
 def deserialize(nodes: list) -> Optional[TreeNode]:
+    """Construct a tree from a level order traversal list of nodes.
+
+    Args:
+        nodes (list): A list of nodes from a level order traversal. Missing
+        children need to be denoted as "X".
+
+    Returns:
+        Optional[TreeNode]: Returns the root node of the new tree.
+    """
     if not nodes:
         return None
 
