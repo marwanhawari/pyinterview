@@ -1,1 +1,25 @@
-site_name: My Docs
+site_name: pyinterview
+repo_name: marwanhawari/pyinterview
+repo_url: https://github.com/marwanhawari/pyinterview
+theme:
+  name: material
+  icon:
+    repo: fontawesome/brands/github
+  palette:
+    - scheme: default
+      primary: cyan
+      toggle:
+        icon: material/lightbulb
+        name: Switch to dark mode
+    - scheme: slate
+      primary: cyan
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to light mode
+  logo: pyinterview_icon.png
+  plugins:
+  - search
+  - social
+  features:
+  - search.suggest
+  - search.highlight
