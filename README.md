@@ -20,7 +20,7 @@ pip install pyinterview
 ```
 
 # Documentation
-[Read the Docs](https://pyinterview.readthedocs.io)
+[pyinterview Homepage](https://pyinterview.org)
 
 # PyPI
 [PyPI](https://pypi.org/project/pyinterview/)
