@@ -13,9 +13,9 @@ def unsorted_array():
 
 
 @pytest.mark.parametrize(("array"), [([1, 2, 3, 4, 5]), ([-1, 2, 3, 4, 10])])
-@pytest.mark.parametrize(("target", "output"), [(2, 1), (3, 2), (4, 3)])
-def test_binary_search_hit(array, target, output):
-    assert binary_search(array, target) == output
+@pytest.mark.parametrize(("target", "expected"), [(2, 1), (3, 2), (4, 3)])
+def test_binary_search_hit(array, target, expected):
+    assert binary_search(array, target) == expected
 
 
 def test_binary_search_miss():
