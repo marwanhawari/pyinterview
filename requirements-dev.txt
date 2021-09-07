@@ -2,6 +2,8 @@ black
 build
 coverage
 flake8
+mkdocs
+mkdocs-material
 pipdeptree
 pre-commit
 pytest
