@@ -19,6 +19,16 @@ This library contains useful data structures and algorithms that are commonly us
 pip install pyinterview
 ```
 
+# Usage
+Users can import common data structures and algorithms from several different modules. For example, if we want to construct a binary tree, we can import the `TreeNode` class from the `trees` module:
+```python
+from pyinterview.trees import TreeNode
+
+root = TreeNode(2)
+root.left = TreeNode(1)
+root.right = TreeNode(3)
+```
+
 # Documentation
 [pyinterview Documentation](https://pyinterview.org)
 
