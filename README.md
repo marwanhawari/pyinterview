@@ -12,7 +12,7 @@
 [![GitHub](https://img.shields.io/github/license/marwanhawari/pyinterview?color=blue)](LICENSE)
 
 # Description
-This library contains useful data structures and algorithms that are commonly used in coding interviews. The goal of this project is to provide modules that can actually be used to solve interviewing problems. This project is NOT a code dump of solutions to interview problems. For convenience, the classes and functions were designed to be compatible with LeetCode.
+This library contains useful data structures and algorithms that are commonly used in coding interviews. The goal of this project is to provide modules that can actually be used to solve interviewing problems. This project is NOT a code dump of solutions to interviewing problems. The classes and functions were designed to be compatible with LeetCode.
 
 # Installation
 The `pyinterview` package can be installed directly using `pip`.
@@ -34,7 +34,7 @@ root.right = TreeNode(3)
 ```python
 from pyinterview.graphs import undirected_adj_list
 
-edges = [('A', 'B'), ('A', 'C'), ('C', 'D)]
+edges = [('A', 'B'), ('A', 'C'), ('C', 'D')]
 adj_list = undirected_adj_list(edges)
 ```
 
