@@ -2,5 +2,5 @@
 source = pyinterview
 
 [report]
-fail_under = 60
+fail_under = 70
 show_missing = true
