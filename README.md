@@ -21,7 +21,7 @@ pip install pyinterview
 ```
 
 # Usage
-Users can import common data structures and algorithms from several different modules. For example:
+Users can import common data structures and algorithms from several different modules. For example:<br>
 
 * To manually construct a binary tree, import the `TreeNode` class from the `trees` module:
 ```python
