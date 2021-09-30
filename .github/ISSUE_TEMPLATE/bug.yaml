@@ -8,30 +8,56 @@ body:
       value: |
         Thanks for taking the time to fill out this bug report!
   - type: textarea
-    id: bug-description
+    id: what-was-tried
     attributes:
-      label: Describe the bug
-      description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see!
-      value: "A bug happened!"
+      label: What were you trying to do?
+      description: Describe what you were trying to accomplish.
     validations:
       required: true
+  - type: textarea
+    id: what-was-done
+    attributes:
+      label: What did you do?
+      description: Describe exactly what you did to see the bug. Try to make this as reproducible as possible.
+    validations:
+      required: true
+  - type: textarea
+    id: what-was-expected
+    attributes:
+      label: What did you expect to see?
+      description: Describe the expected (non-bug) output.
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What actually happened?
+      description: Descirbe what actually happened. If you got an error, paste the error message or logs below.
+    validations:
+      required: false
+      
   - type: dropdown
-    id: version
+    id: python-version
     attributes:
-      label: Version
-      description: What version of our software are you running?
-      options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
+      label: Python version
+      description: What version of Python are you running?
     validations:
       required: true
+  - type: input
+    id: software-version
+    attributes:
+      label: Software version
+      description: What version of our software are you running?
+    validations:
+      required: true
+
   - type: textarea
     id: logs
     attributes:
       label: Relevant log output
       description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
       render: shell
+
   - type: checkboxes
     id: terms
     attributes:
