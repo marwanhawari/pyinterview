@@ -36,7 +36,7 @@ body:
     validations:
       required: false
       
-  - type: dropdown
+  - type: input
     id: python-version
     attributes:
       label: Python version
