@@ -35,7 +35,14 @@ body:
       description: Descirbe what actually happened. If you got an error, paste the error message or logs below.
     validations:
       required: false
-      
+
+  - type: input
+    id: os-version
+    attributes:
+      label: OS version
+      description: What operating system and version are you running?
+    validations:
+      required: true
   - type: input
     id: python-version
     attributes:
@@ -57,6 +64,14 @@ body:
       label: Relevant log output
       description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
       render: shell
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: Add any other context about the problem here.
+    validations:
+      required: false
 
   - type: checkboxes
     id: terms
