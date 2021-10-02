@@ -3,6 +3,17 @@
 #### Any and all contributions are welcome at this stage - paritcularly with writing tests, documentation, and new features.
 #### *Note*: *All new features should also include tests.*
 
+## Conventions
+
+| Task  | Tool  |
+| - | - |
+| Tests | `pytest` |
+| Coverage | `coverage.py` |
+| Formatting | `black` |
+| Linting | `flake8` |
+| Type checking | `pytype` |
+| Docstrings | `google` |
+
 ## How to contribute
 1. Fork this repository and clone it onto your machine.
     ```
