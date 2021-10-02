@@ -16,7 +16,17 @@ def LL_to_array(head: ListNode) -> list:
     Returns:
         list: A new array containing the values from the linked list in order.
     """
-    return []
+
+    if head is None:
+        return []
+
+    itr = head
+    result = []
+    while itr:
+        result.append(itr.val)
+        itr = itr.next
+
+    return result
 
 
 def array_to_LL(array: list) -> ListNode:

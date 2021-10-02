@@ -1,4 +1,4 @@
-from pyinterview.linked_lists import ListNode, reverse_LL
+from pyinterview.linked_lists import ListNode, reverse_LL, LL_to_array
 
 head = ListNode(0)
 second = head.next = ListNode(1)
@@ -7,11 +7,11 @@ fourth = head.next.next.next = ListNode(3)
 fifth = head.next.next.next.next = ListNode(4)
 
 
-def test_LL_to_list():
-    return
+def test_LL_to_array():
+    assert LL_to_array(head) == [0, 1, 2, 3, 4]
 
 
-def test_list_to_LL():
+def test_array_to_LL():
     return
 
 
