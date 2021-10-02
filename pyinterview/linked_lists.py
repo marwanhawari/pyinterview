@@ -71,7 +71,19 @@ def pop_LL(head: ListNode) -> ListNode:
     Returns:
         ListNode: The element that used to be the last element of the linked list.
     """
-    return ListNode(0)
+    end = self.end
+    strt = self.begin
+    if strt==end:
+        self.begin = self.end = None
+        return end.val
+    while strt.next is not end:
+        strt = strt.next
+    strt.next=None
+    self.end=strt
+    
+    
+    
+    return end.val
 
 
 def append_LL(head: ListNode, element: Union[int, float, str]) -> ListNode:
