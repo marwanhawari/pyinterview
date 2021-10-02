@@ -1,9 +1,13 @@
 from pyinterview.sorting import (
+    bubble_sort,
     quick_sort,
     merge_sort,
     topological_sort,
 )
 
+def test_bubble_sort():
+    assert bubble_sort([0, 4, 5, 2, 8, 1, 3]) == [0, 1, 2, 3, 4, 5, 8]
+    assert bubble_sort([45, 0, 0, 1, 1, 54, 2, 4]) == [0, 0, 1, 1, 2, 4, 45, 54]
 
 def test_quick_sort():
     assert quick_sort([5, 1, 2, 6, 7, 0, 9]) == [0, 1, 2, 5, 6, 7, 9]
