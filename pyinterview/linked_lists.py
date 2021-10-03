@@ -80,7 +80,7 @@ def pop_LL(head: ListNode) -> Optional[ListNode]:
         popped = itr.next
         itr.next = None
         
-     return popped
+    return popped
 
 
 def append_LL(head: ListNode, element: Union[int, float, str]) -> ListNode:
