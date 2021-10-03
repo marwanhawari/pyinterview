@@ -62,7 +62,7 @@ def reverse_LL(head: ListNode) -> ListNode:
     return prev
 
 
-def pop_LL(head: ListNode) -> ListNode:
+def pop_LL(head: ListNode) -> Optional[ListNode]:
     """Pop the last element from a linked list.
 
     Args:
@@ -74,12 +74,13 @@ def pop_LL(head: ListNode) -> ListNode:
     if head is None:
         print("Linked List is empty!")
     else:
-        n=head
-        while n.next.next is not None:
-            n=n.next
-        UsedToBeLast=n.next
-        n.next=None
-     return UsedToBeLast
+        itr = head
+        while itr.next.next is not None:
+            itr = itr.next
+        popped = itr.next
+        itr.next = None
+        
+     return popped
 
 
 def append_LL(head: ListNode, element: Union[int, float, str]) -> ListNode:
