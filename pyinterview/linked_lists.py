@@ -1,4 +1,4 @@
-from typing import Union
+from typing import Union, Optional
 
 
 class ListNode:
@@ -62,7 +62,7 @@ def reverse_LL(head: ListNode) -> ListNode:
     return prev
 
 
-def pop_LL(head: ListNode) -> ListNode:
+def pop_LL(head: ListNode) -> Optional[ListNode]:
     """Pop the last element from a linked list.
 
     Args:
@@ -71,7 +71,16 @@ def pop_LL(head: ListNode) -> ListNode:
     Returns:
         ListNode: The element that used to be the last element of the linked list.
     """
-    return ListNode(0)
+    if head is None:
+        print("Linked List is empty!")
+    else:
+        itr = head
+        while itr.next.next is not None:
+            itr = itr.next
+        popped = itr.next
+        itr.next = None
+        
+    return popped
 
 
 def append_LL(head: ListNode, element: Union[int, float, str]) -> ListNode:
