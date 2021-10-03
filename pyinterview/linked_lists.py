@@ -66,21 +66,23 @@ def pop_LL(head: ListNode) -> Optional[ListNode]:
     """Pop the last element from a linked list.
 
     Args:
-        head (ListNode): The head node of the linked list.
+        head (Optional[ListNode]): The head node of the linked list.
 
     Returns:
         ListNode: The element that used to be the last element of the linked list.
     """
     if head is None:
         print("Linked List is empty!")
+    elif head.next is None:
+        print("Linked List only contains one node!")
     else:
         itr = head
-        while itr.next.next is not None:
+        while itr.next.next:
             itr = itr.next
         popped = itr.next
         itr.next = None
-        
-    return popped
+
+        return popped
 
 
 def append_LL(head: ListNode, element: Union[int, float, str]) -> ListNode:
