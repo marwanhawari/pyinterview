@@ -18,6 +18,7 @@ theme:
   - search.suggest
   - search.highlight
 nav:
+  - Home: "index.md"
   - Algorithms:
     - Searching: "algorithms/searching.md"
     - Sorting: "algorithms/sorting.md"
