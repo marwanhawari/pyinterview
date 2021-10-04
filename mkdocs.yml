@@ -17,4 +17,12 @@ theme:
   features:
   - search.suggest
   - search.highlight
+nav:
+  - Graphs: "graphs.md"
+  - Heaps: "heaps.md"
+  - Linked lists: "linked_lists.md"
+  - Searching algorithms: "searching.md"
+  - Sorting algorithms: "sorting.md"
+  - Trees: "trees.md"
+  - Tries: "tries.md"
 
