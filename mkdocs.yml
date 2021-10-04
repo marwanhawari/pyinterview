@@ -18,11 +18,13 @@ theme:
   - search.suggest
   - search.highlight
 nav:
-  - Graphs: "graphs.md"
-  - Heaps: "heaps.md"
-  - Linked lists: "linked_lists.md"
-  - Searching algorithms: "searching.md"
-  - Sorting algorithms: "sorting.md"
-  - Trees: "trees.md"
-  - Tries: "tries.md"
+  - Algorithms:
+    - Searching: "algorithms/searching.md"
+    - Sorting: "algorithms/sorting.md"
+  - Data structures: 
+    - Graphs: "data_structures/graphs.md"
+    - Heaps: "data_structures/heaps.md"
+    - Linked lists: "data_structures/linked_lists.md"
+    - Trees: "data_structures/trees.md"
+    - Tries: "data_structures/tries.md"
 
