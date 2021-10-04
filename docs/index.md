@@ -14,13 +14,13 @@
 # Description
 This library contains useful data structures and algorithms that are commonly used in coding interviews. The goal of this project is to provide modules that can actually be used to solve interviewing problems. This project is NOT a code dump of solutions to interviewing problems. The classes and functions were designed to be compatible with LeetCode.
 
-# Installation
+## Installation
 The `pyinterview` package can be installed directly using `pip`.
 ```
 pip install pyinterview
 ```
 
-# Usage
+## Usage
 Users can import common data structures and algorithms from several different modules. For example:
 
 * To manually construct a binary tree, import the `TreeNode` class from the `trees` module:
@@ -41,7 +41,7 @@ adj_list = undirected_adj_list(edges)
 ```
 
 
-# Documentation
+## Documentation
 The documentation is a work in progress, but contributions are welcome!
 
 [pyinterview documentation](https://pyinterview.org)
