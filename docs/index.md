@@ -46,15 +46,6 @@ The documentation is a work in progress, but contributions are welcome!
 
 ## Linked lists
 
-A linked list is a is a linear collection of data elements whose order is not given by their physical placement in memory. Instead, each element points to the next. It is a data structure consisting of a collection of nodes which together represent a sequence.
-
-In other words, a linked list consists of nodes where each node contains a data field and a reference to the next node in the list.
-
-The file [linked_lists.py](../pyinterview/linked_lists.py) contains few functions that will let you play with a linked list.
-
-As stated above a single element from the list is called a node. The code contains some data field and a reference to the next node in the list. Two helper functions will help you convert a linked list to an array and vice-versa.
-Reverting a linked list could be done with the function `reverse_LL`. Of course the returned type object will also be a node.
-
-Finally operations on the linked list are permitted through the use of functions such as fetching the last element from the list with the pop function, appending an element to the end of a linked list or even removing the first element of the linked list.
+The ListNode class consists of a `val` attribute and a `next` attribute. It can be used to create individual nodes in a linked list. Given the head node of a linked list, many functions in [linked_lists.py](../pyinterview/linked_lists.py), including `reverse_LL` and `pop_LL`, can be used to operate on the linked list.
 
 [pyinterview documentation](https://pyinterview.org)
