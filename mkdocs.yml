@@ -11,23 +11,12 @@ theme:
     - scheme: default
       primary: cyan
   logo: pyinterview_icon.png
-  plugins:
-  - search
-  - social
-  - mkdocstrings:
-      default_handler: python
-      handlers:
-        python:
-          setup_commands:
-            - import sys
-            - sys.path.append("pyinterview")
-          rendering:
-            show_source: true
-      watch:
-        - pyinterview
   features:
   - search.suggest
   - search.highlight
+plugins:
+- search
+- mkdocstrings
 markdown_extensions:
   - toc:
       permalink: true

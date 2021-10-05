@@ -1,3 +1,5 @@
 # Graphs
 
-::: pyinterview.graphs.undirected_adj_list
+::: pyinterview.graphs
+    rendering:
+      sort_members: source

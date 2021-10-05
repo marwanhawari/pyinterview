@@ -52,7 +52,7 @@ def inbound_degrees(adj_list: dict) -> dict:
         adj_list (dict): An adjacency list. Can be from an undirected or directed graph.
 
     Returns:
-        dict: A dictionary where the key is a graph node
+        dict: A dictionary where the key is a graph node \
         and the value is the number of inbound edges.
     """
     indegrees = {node: 0 for node in adj_list}
@@ -62,18 +62,18 @@ def inbound_degrees(adj_list: dict) -> dict:
     return indegrees
 
 
-def find_sources(inbounnd_degrees: dict) -> deque:
+def find_sources(indegrees: dict) -> deque:
     """Find sources (nodes that have 0 inbound edges).
 
     Args:
-        inbounnd_degrees (dict): A dictionary where the key is a graph node
+        indegrees (dict): A dictionary where the key is a graph node \
         and the value is the number of inbound edges.
 
     Returns:
         deque: A deque containing source nodes.
     """
     sources = deque()
-    for node in inbounnd_degrees:
-        if inbounnd_degrees[node] == 0:
+    for node in indegrees:
+        if indegrees[node] == 0:
             sources.append(node)
     return sources

@@ -90,7 +90,7 @@ def append_LL(head: ListNode, element: Union[int, float, str]) -> ListNode:
 
     Args:
         head (ListNode): The head node of the linked list.
-        element (Union[int, float, str]): The value of the ListNode element
+        element (Union[int, float, str]): The value of the ListNode element \
         to be appended.
 
     Returns:
@@ -104,7 +104,7 @@ def remove_LL(head: ListNode, element: Union[int, float, str]) -> ListNode:
 
     Args:
         head (ListNode): The head node of the linked list.
-        element (Union[int, float, str]): The value of the ListNode element
+        element (Union[int, float, str]): The value of the ListNode element \
         to be removed.
 
     Returns:

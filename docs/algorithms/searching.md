@@ -1,1 +1,3 @@
 # Searching
+
+::: pyinterview.searching
