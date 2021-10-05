@@ -44,4 +44,8 @@ adj_list = undirected_adj_list(edges)
 ## Documentation
 The documentation is a work in progress, but contributions are welcome!
 
+## Linked lists
+
+The ListNode class consists of a `val` attribute and a `next` attribute. It can be used to create individual nodes in a linked list. Given the head node of a linked list, many functions in [linked_lists.py](../pyinterview/linked_lists.py), including `reverse_LL` and `pop_LL`, can be used to operate on the linked list.
+
 [pyinterview documentation](https://pyinterview.org)
