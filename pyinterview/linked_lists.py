@@ -85,11 +85,11 @@ def pop_LL(head: ListNode) -> Optional[ListNode]:
         return popped
 
 
-def append_LL(head: ListNode, element: Union[int, float, str]) -> ListNode:
+def append_LL(head: ListNode, element: Union[int, float, str]) -> Optional[ListNode]:
     """Append an element to the end of a linked list.
 
     Args:
-        head (ListNode): The head node of the linked list.
+        head (Optional[ListNode]): The head node of the linked list.
         element (Union[int, float, str]): The value of the ListNode element \
         to be appended.
 
@@ -102,10 +102,9 @@ def append_LL(head: ListNode, element: Union[int, float, str]) -> ListNode:
         itr = head
         while itr.next:
             itr = itr.next
-        last = itr
-        last.next = ListNode(element)
+        itr.next = ListNode(element)
 
-    return ListNode(0)
+    return head
 
 
 def remove_LL(head: ListNode, element: Union[int, float, str]) -> ListNode:
