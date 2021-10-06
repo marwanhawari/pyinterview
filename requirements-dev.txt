@@ -4,6 +4,7 @@ coverage
 flake8
 mkdocs
 mkdocs-material
+mkdocstrings
 pipdeptree
 pre-commit
 pytest

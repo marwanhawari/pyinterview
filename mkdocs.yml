@@ -11,10 +11,24 @@ theme:
     - scheme: default
       primary: cyan
   logo: pyinterview_icon.png
-  plugins:
-  - search
-  - social
   features:
   - search.suggest
   - search.highlight
+plugins:
+- search
+- mkdocstrings
+markdown_extensions:
+  - toc:
+      permalink: true
+nav:
+  - Home: index.md
+  - Algorithms:
+    - Searching: algorithms/searching.md
+    - Sorting: algorithms/sorting.md
+  - Data structures: 
+    - Graphs: data_structures/graphs.md
+    - Heaps: data_structures/heaps.md
+    - Linked lists: data_structures/linked_lists.md
+    - Trees: data_structures/trees.md
+    - Tries: data_structures/tries.md
 

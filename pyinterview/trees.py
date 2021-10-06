@@ -106,7 +106,7 @@ def serialize(root: TreeNode) -> list:
         root (TreeNode): The root node.
 
     Returns:
-        list: Tbe list of nodes in level order traversal order. Missing
+        list: Tbe list of nodes in level order traversal order. Missing \
         children are denoted with an "X".
     """
     if not root:
@@ -134,7 +134,7 @@ def deserialize(nodes: list) -> Optional[TreeNode]:
     """Construct a tree from a level order traversal list of nodes.
 
     Args:
-        nodes (list): A list of nodes from a level order traversal. Missing
+        nodes (list): A list of nodes from a level order traversal. Missing \
         children need to be denoted as "X".
 
     Returns:
