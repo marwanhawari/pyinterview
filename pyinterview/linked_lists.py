@@ -96,6 +96,15 @@ def append_LL(head: ListNode, element: Union[int, float, str]) -> ListNode:
     Returns:
         ListNode: The head node of the linked list.
     """
+    if head is None:
+        print("Linked List is empty!")
+    else:
+        itr = head
+        while itr.next:
+            itr = itr.next
+        last = itr
+        last.next = ListNode(element)
+
     return ListNode(0)
 
 
