@@ -1,4 +1,10 @@
-from pyinterview.linked_lists import ListNode, reverse_LL, LL_to_array, pop_LL
+from pyinterview.linked_lists import (
+    ListNode,
+    reverse_LL,
+    LL_to_array,
+    pop_LL,
+    append_LL,
+)
 
 head = ListNode(0)
 second = head.next = ListNode(1)
@@ -13,6 +19,15 @@ def test_LL_to_array():
 
 def test_array_to_LL():
     return
+
+
+def test_append_LL():
+    assert fifth.val == 4
+    assert fifth.next is None
+    append_LL(head, 5)
+    assert fifth.next is not None
+    assert fifth.next.val == 5
+    assert fifth.next.next is None
 
 
 def test_pop_LL():
